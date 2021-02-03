@@ -1,6 +1,7 @@
 # Notice
 Not working anymore because Notion change the access to its images.
-you can try thi steps:
+
+you can try these steps instead:
 1. make notion page public
 2. potion-api to get static web of notion page (https://benborgers.com/posts/50)
 3. save inspect elemement as html
