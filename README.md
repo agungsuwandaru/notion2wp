@@ -1,22 +1,17 @@
 # Notice
-Not working anymore because Notion change the access to its images.
+this is for converting notion page into static html page. the idea is that to create notion as CMS and publish it on wordpress. so, you can have publish on wordpress without worrying about how much storage you use, and creating document is musch more simple becase you can just import from word doc into notion then into wordpress.
 
-you can try these steps instead:
-1. make notion page public
-2. potion-api to get static web of notion page (https://benborgers.com/posts/50)
-3. save inspect elemement as html
-4. save the html to html custom box in your wordpress
+# Usage
+make notion page public
+share and copy notion link
+put notion link into param
+need to install chromedriver and put it inside PATH
+command: python notion2wp.py notion-url output-file
 
-Next version: automation step 1-3
-
-# previous usage:
-
-## notion2wp
-convert notion md format to wordpress html format
-
-## usage
-python notion2wp.py <notion.md> <wordpress.html>
-
-1. make notion page public
-2. copy and paste notion page to notion.md
-3. copy and paste wordpress.html to wordpress' new post on html tab
+# Features
+get notion page html content (full rendered with JS and CSS) using selenium
+get image url from notion page
+create skeleton html page from potion-api.now.sh API
+fill and repair image url from notion page into skeleton page because somehow potion-api.now.sh don't create valid image url if the notion page is imported from .doc
+copy table of content from notion page and fill it into skeleton page
+link table of content with heading 1, 2, 3
